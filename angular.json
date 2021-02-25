@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fakelook": {
+    "angular-jwt-authentication-example": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "less"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fakelook",
+            "outputPath": "dist/angular-jwt-authentication-example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.less"
             ],
             "scripts": []
           },
@@ -62,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fakelook:build"
+            "browserTarget": "angular-jwt-authentication-example:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "fakelook:build:production"
+              "browserTarget": "angular-jwt-authentication-example:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fakelook:build"
+            "browserTarget": "angular-jwt-authentication-example:build"
           }
         },
         "test": {
@@ -88,7 +92,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.less"
             ],
             "scripts": []
           }
@@ -110,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "fakelook:serve"
+            "devServerTarget": "angular-jwt-authentication-example:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "fakelook:serve:production"
+              "devServerTarget": "angular-jwt-authentication-example:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "fakelook"
+  "defaultProject": "angular-jwt-authentication-example"
 }
