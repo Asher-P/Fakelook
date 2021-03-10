@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:4000',
-  backendRegisterUrl: 'http://localhost:3000/register'
+  backendRegisterUrl: 'http://localhost:6060/register'
 };
 
 /*

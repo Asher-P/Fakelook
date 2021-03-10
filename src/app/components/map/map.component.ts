@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
- map:string;
-  constructor() { }
+  constructor(){}
+  ngOnInit(){}
 
-  ngOnInit(): void {
-  }
+}
 
+// just an interface for type safety.
+interface marker {
+	lat: number;
+	lng: number;
+	label?: string;
+	draggable: boolean;
 }
