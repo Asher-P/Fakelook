@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '@app/_services';
 import { CookieService } from 'ngx-cookie-service';
 
-@Component({ templateUrl: 'login.component.html' })
+@Component({styleUrls:["./login.css"] ,templateUrl: 'login.component.html' })
 export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     loading = false;
@@ -29,7 +29,10 @@ export class LoginComponent implements OnInit {
             email: ['', Validators.required],
             password: ['', Validators.required]
         });
+        let login_parent = document.getElementById("Login").parentElement;
+        login_parent.classList.add("header");
     }
+
 
     // convenience getter for easy access to form fields
     get f() { return this.loginForm.controls; }

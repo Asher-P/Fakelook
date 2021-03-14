@@ -17,6 +17,7 @@ import { ErrorComponent } from './components/error/error.component';;
 import { PostsContainerComponent } from './components/posts-container/posts-container.component'
 ;
 import { PostComponent } from './components/post/post.component'
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -27,6 +28,8 @@ import { PostComponent } from './components/post/post.component'
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyAjzCl0ULJxWUALDUrStb9AZ6mWBw9G9Eg'})
     ],
     declarations: [
         AppComponent,

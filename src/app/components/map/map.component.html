@@ -1,5 +1,30 @@
-<div>
-    <p>
-Map Works!!!
-    </p>
+
+<div id="map">
+     <agm-map
+     [latitude]="position.coords.latitude"
+     [longitude]="position.coords.longitude"
+     (zoomChange)="zoomChange($event)"
+     [zoom]="zoom">
+     <agm-marker 
+        *ngFor="let post of posts; let i = index"
+        name="imageMark"
+        [latitude]="post.latitude"
+        [longitude]="post.longitude"
+        [title]="currentLocationTitle"
+        [iconUrl]="{
+            url: post.image,
+            origin:{
+              x:0,
+              y:0
+            },
+            scaledSize: {
+              width: 50,
+              height: 50
+            }
+          } "
+        >
+    </agm-marker> 
+
+</agm-map>
+  
 </div>

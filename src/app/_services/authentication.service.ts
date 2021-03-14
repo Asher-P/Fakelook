@@ -4,10 +4,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as env from '../../environments/authenticationEnv'
 import { environment } from '@environments/environment';
-import { User } from '@app/_models';
 import { AuthenticationEnv } from '../../environments/authenticationEnv';
 import { CookieService } from 'ngx-cookie-service';
 import { UserService } from './user.service';
+import User from 'src/common/user';
 
 
 @Injectable({ providedIn: 'root' })

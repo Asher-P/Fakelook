@@ -1,5 +1,4 @@
-﻿<div class="grid-container card mt-4">
-<div class="header">
+﻿<div class="header">
 <div>
     <h3>Hello {{user.first_name}} {{user.last_name}}</h3>
 </div>
@@ -40,10 +39,10 @@
 <div class="main card-body">
     <div>
             <div  style="justify-items: center;" *ngIf="showFeed" name="feedStyle">
-                <app-posts-container></app-posts-container>
+                <app-posts-container [posts]="posts"></app-posts-container>
             </div>
-            <div  *ngIf="showMap" name="mapStyle">
-                <app-map></app-map>
+            <div  *ngIf="showMap" name="mapStyle" >
+                <app-map [posts]="posts"></app-map>
             </div> 
         </div>   
     </div>
