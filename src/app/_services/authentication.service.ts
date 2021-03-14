@@ -64,13 +64,7 @@ export class AuthenticationService {
          return tokenjson;
         }
 
-    register(user:User) {
-        return this.http.post<any>(this.registerUrl, user)
-    }
-
-    logout() {
-        // remove user from local storage to log user out
-        localStorage.removeItem('currentUser');
-        this.currentUserSubject.next(null);
-    }
+        register(user:User) {
+            return this.http.post<any>(this.registerUrl, user)}
+            
 }
