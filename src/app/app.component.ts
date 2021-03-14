@@ -17,7 +17,8 @@ export class AppComponent {
     }
 
     logout() {
-        this.authenticationService.logout();
+        //*need to implimante a logout method*
+        //this.authenticationService.logout();
         this.router.navigate(['/login']);
     }
 }

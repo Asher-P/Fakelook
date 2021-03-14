@@ -2,8 +2,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import {MenuRoutingModule} from './components/home/menu-routing.module'
-
 // used to create fake backend
 //import { fakeBackendProvider } from './_helpers';
 
