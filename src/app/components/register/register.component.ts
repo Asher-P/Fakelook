@@ -9,7 +9,13 @@ import { AuthenticationService } from '@app/_services';
 })
 export class RegisterComponent implements OnInit {
   registerFormGroup: FormGroup;
-  registerUserData = { username: "", password: "", confirmPassword: "" };
+  registerUserData = { 
+    first_name:"",
+    last_name:"",
+    email:"",
+    username: "",
+     password: "",
+      confirmPassword: "" };
   constructor(
     private formBuilder: FormBuilder,
     private authenticationService: AuthenticationService
@@ -18,9 +24,15 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.registerFormGroup = this.formBuilder.group({
       username: ['', Validators.required],
+      first_name: ['', Validators.required],
+      last_name: ['', Validators.required],
+      email: ['',[Validators.email,Validators.required]],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
     });
+    let register_parent = document.getElementById("Register").parentElement;
+        
+        register_parent.classList.add("header");
   }
 
   registerUser() {

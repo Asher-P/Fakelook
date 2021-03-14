@@ -1,4 +1,4 @@
-<div class="col-md-6 offset-md-3 mt-5">
+<div class="col-md-6 offset-md-3 mt-5" id="Register">
     <div class="card">
         <h4 class="card-header" style="display:flex; flex-direction: column; text-align: center;">Register</h4>
         <div class="card-body">
@@ -7,6 +7,21 @@
                     <label for="username">Username</label>
                     <input [(ngModel)]="registerUserData.username" name="username" type="text"
                         formControlName="username" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="first_name">First name</label>
+                    <input [(ngModel)]="registerUserData.first_name" name="first_name" type="text"
+                        formControlName="first_name" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastn_name">Last name</label>
+                    <input [(ngModel)]="registerUserData.last_name" name="last_name" type="text"
+                        formControlName="last_name" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input [(ngModel)]="registerUserData.email" name="email" type="text"
+                        formControlName="email" class="form-control rounded-0" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
