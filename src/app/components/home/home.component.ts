@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit{
                 new Post(new User("Asher","Peretz"),"https://blog.photofeeler.com/wp-content/uploads/2017/09/tinder-photo-size-tinder-picture-size-tinder-aspect-ratio-image-dimensions-crop.jpg",29.801462599999997,30.6524561,"somting,bbb"),
              
               ] 
+              
         }
 
     MapClicked = ()=>{
