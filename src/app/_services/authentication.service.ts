@@ -56,13 +56,6 @@ export class AuthenticationService {
         }));
       }
 
-      async getToken(){
-         let tokenjson:any = await this.http.get(`${env.AuthenticationEnv.apiUrl}/facebook/islogin`).toPromise();
-         let userProfile = await this.http.get(`${AuthenticationEnv.facebookVerifyApi}${tokenjson.token}`).toPromise();
-         console.log("userProfile",userProfile);
-         this.userService.setUser(<User>userProfile);
-         return tokenjson;
-        }
 
     register(user:User) {
         return this.http.post<any>(this.registerUrl, user)
