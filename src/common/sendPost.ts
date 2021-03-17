@@ -4,13 +4,16 @@ class SendPost{
     image:File;
     latitude:number;
     longitude:number;
-    hashtags:string
-    constructor(user:User,img:File,latitude:number,longitude:number,hashtags:string){
+    hashtags:string;
+    userTags:string;
+    constructor(user:User,img:File,latitude:number,longitude:number,hashtags:string,userTags:string){
       this.image = img;
       this.latitude=latitude;
       this.longitude=longitude;
       this.user = user;
       this.hashtags = hashtags;
+      this.userTags = userTags;
     }
+
   }
   export default SendPost
