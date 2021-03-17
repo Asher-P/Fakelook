@@ -4,13 +4,15 @@ class Post {
     image:string;
     latitude:number;
     longitude:number;
-    hashtags:string
+    hashtags:string;
+    date:Date;
     constructor(user:User,img:string,latitude:number,longitude:number,hashtags:string){
       this.image = img;
       this.latitude=latitude;
       this.longitude=longitude;
       this.user = user;
       this.hashtags = hashtags;
+      this.date = new Date()
     }
 }
 

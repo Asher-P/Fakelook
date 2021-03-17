@@ -6,6 +6,7 @@ class SendPost{
     longitude:number;
     hashtags:string;
     userTags:string;
+    date:Date;
     constructor(user:User,img:File,latitude:number,longitude:number,hashtags:string,userTags:string){
       this.image = img;
       this.latitude=latitude;
@@ -13,6 +14,7 @@ class SendPost{
       this.user = user;
       this.hashtags = hashtags;
       this.userTags = userTags;
+      this.date= new Date();
     }
 
   }
