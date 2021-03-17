@@ -1,32 +1,33 @@
 ﻿<div class="grid-container card mt-4">
 <div class="header">
     <div>
+        <!-- <img src={{user.picture.data.url}}/ width="35px" height="45px"> -->
         <h3>Hello {{user.first_name}} {{user.last_name}}</h3>
     </div>
 </div>
 <div class="menu">
     <h4 class="card-header">Menu</h4>
-    <div class="card-body">
+    <div class="card-header">
         <div>
             <div>
                 <!-- Image and text -->
-                <nav class="navbar navbar-light bg-primery" style="height:50px">
+                <nav class="navbar navbar-dark bg-primery" style="height:50px">
                     <div (click)=FeedClicked() class="card" class="pointer">
-                        <img src="https://freepikpsd.com/wp-content/uploads/2019/10/feed-icon-png-3-Transparent-Images.png"
+                        <img src={{icons.feed}}
                             class="d-inline-block align-top" alt="Feed" height="50" width="50">
                         <span>
                             Feed
                         </span>
                     </div>
                     <div (click)=MapClicked() class="card" class="pointer">
-                        <img src="https://pics.freeicons.io/uploads/icons/png/568635131536669843-512.png"
+                        <img src={{icons.map}}
                             class="d-inline-block align-top" alt="Feed" height="50" width="50">
                         <span>
                             Map
                         </span>
                     </div>
                     <div (click)=FriendsClicked() class="card" class="pointer">
-                        <img src="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"
+                        <img src={{icons.socialFriends}}
                             class="d-inline-block align-top" alt="Feed" height="50" width="50">
                         <span>
                             Friends
@@ -37,12 +38,42 @@
         </div>
     </div>
 </div>
+<div class='functionsmenu'>
+    <div>
+        <nav class="navbar navbar-light bg-primery" style="height:50px">
+            <div (click)=FilterClicked() class="card" class="pointer">
+                <img src={{icons.filter}}
+                    class="d-inline-block align-top" alt="Feed" height="50" width="50">
+                <span>
+                    Filter
+                </span>
+            </div>
+            <div (click)=UploadClicked() class="card" class="pointer">
+                <img src={{icons.upload}}
+                    class="d-inline-block align-top" alt="Feed" height="50" width="50">
+                <span>
+                    Upload
+                </span>
+            </div>
+        </nav>
+</div>
+</div>
 <div class="main card-body">  
-        <div style="justify-items: center;" *ngIf="showFeed" name="feedStyle">
+        <div style="justify-items: center" *ngIf="showFeed" name="feedStyle">
             <app-posts-container [posts]="posts"></app-posts-container>
         </div>
-        <div *ngIf="showMap" name="mapStyle">
+        <div *ngIf="showMap" style="justify-items: center" name="mapStyle">
             <app-map [posts]="posts"></app-map>
         </div>
 </div>
+<div class="functions card-body">
+    <div *ngIf="showUpload">
+        <app-upload-post [currentUser]="user"></app-upload-post>
+    </div>
+    <div *ngIf="showFilter">
+        <app-filter></app-filter>
+    </div>
+
+</div>
+
 </div>

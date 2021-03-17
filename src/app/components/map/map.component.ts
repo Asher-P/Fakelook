@@ -31,19 +31,7 @@ export class MapComponent implements OnInit {
     
    }
 
-  // createIcon(url:string){
-  //   return {
-  //     url: url,
-  //     origin:{
-  //       x:0,
-  //       y:0
-  //     },
-  //     scaledSize: {
-  //       width: 70,
-  //       height: 70
-  //     }
-  //   } 
-  // }
+
   
   zoomChange($event){
     console.log($event);
