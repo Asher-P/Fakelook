@@ -1,1 +1,15 @@
-<p>filter works!</p>
+<form (ngSubmit)="submitPost($event)" style="opacity:70%">
+<app-date-filter (onDateSelect)="DateSelected($event)"></app-date-filter>
+<app-distance-filter (onDistanceSelect)="onDistanceSelected($event)"></app-distance-filter>
+<app-publisher-filter (onPublisherSelect)="onPublisherSelected($event)"></app-publisher-filter>
+<app-tags-filter (onTagsSelect)="onTagsSelected($event)"></app-tags-filter>
+<app-hashtags-filter (onSelectHashtags)="onHashtagsSelected($event)"></app-hashtags-filter>
+<div>
+    <label for="filterbtn" class="btn btn-light">Filter</label>
+    <input type="submit" style="visibility: hidden;" id="filterbtn">
+</div>
+<div>
+    <label for="clear"  class="btn btn-light">clear</label>
+    <input type="button" style="visibility: hidden;" id="clear" (click)="ClearFilters()">
+</div>
+</form>

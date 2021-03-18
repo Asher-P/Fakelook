@@ -21,8 +21,16 @@ import { AgmCoreModule } from '@agm/core';;
 import { UploadPostComponent } from './components/upload-post/upload-post.component'
 ;
 import { FilterComponent } from './components/filter/filter.component'
-
-
+;
+import { DistanceFilterComponent } from './components/filter/filterSubComponenets/distance-filter/distance-filter.component'
+;
+import { PublisherFilterComponent } from './components/filter/filterSubComponenets/publisher-filter/publisher-filter.component'
+;
+import { DateFilterComponent } from './components/filter/filterSubComponenets/date-filter/date-filter.component'
+;
+import { TagsFilterComponent } from './components/filter/filterSubComponenets/tags-filter/tags-filter.component'
+;
+import { HashtagsFilterComponent } from './components/filter/filterSubComponenets/hashtags-filter/hashtags-filter.component'
 
 @NgModule({
     imports: [
@@ -45,7 +53,12 @@ import { FilterComponent } from './components/filter/filter.component'
         MapComponent,
         AccessTokenComponent,
         FilterComponent,
-        UploadPostComponent],
+        UploadPostComponent,
+        HashtagsFilterComponent,
+        TagsFilterComponent,
+        DateFilterComponent,
+        PublisherFilterComponent,
+        DistanceFilterComponent],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
