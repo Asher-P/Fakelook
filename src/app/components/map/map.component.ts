@@ -13,7 +13,7 @@ export class MapComponent implements OnInit {
   widthIcon = 70; 
   imageUrl="https://blog.photofeeler.com/wp-content/uploads/2017/09/tinder-photo-size-tinder-picture-size-tinder-aspect-ratio-image-dimensions-crop.jpg";
  
-  position;
+  position:GeolocationPosition;
   zoom: number = 15;
   currentLocationTitle: string = "you are here";
 
