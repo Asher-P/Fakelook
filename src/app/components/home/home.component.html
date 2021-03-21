@@ -1,9 +1,12 @@
 ﻿<div class="grid-container card mt-4">
 <div class="header">
-    <div>
-        <!-- <img src={{user.picture.data.url}}/ width="35px" height="45px"> -->
+    <div style="display:flex; flex-direction:row">
+        <img src={{user?.picture.data.url}} width="45px" height="45px">  
         <h3>Hello {{user.first_name}} {{user.last_name}}</h3>
     </div>
+</div>
+<div style="justify-content:right">
+<app-logout></app-logout>
 </div>
 <div class="menu">
     <h4 class="card-header">Menu</h4>

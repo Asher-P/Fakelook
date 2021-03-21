@@ -18,7 +18,7 @@ export class FilterComponent implements OnInit {
 
   submitPost(event){
     event.preventDefault();
-    
+
   }
   ClearFilters(){
     this.distance=null;
@@ -30,9 +30,11 @@ export class FilterComponent implements OnInit {
   }
   DateSelected(event){
     this.dataDateFilter = event;
+    console.log(this.dataDateFilter)
   }
   onDistanceSelected(event){
     this.distance = event;
+    console.log(this.distance)
   }
   onHashtagsSelected(event){
     this.hashtags=event;

@@ -2,8 +2,9 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { AuthenticationService } from '@app/_services';
+import { AuthenticationService, UserService } from '@app/_services';
 import { CookieService } from 'ngx-cookie-service';
+import User from 'src/common/user';
 
 @Component({styleUrls:["./login.css"] ,templateUrl: 'login.component.html' })
 export class LoginComponent implements OnInit {
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
         private formBuilder: FormBuilder,
         private router: Router,
         private authenticationService: AuthenticationService,
+        private userService:UserService,
         private coockieService:CookieService
     ) { 
         // redirect to home if already logged in
@@ -26,7 +28,7 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
-            email: ['', Validators.required],
+            username: ['', Validators.required],
             password: ['', Validators.required]
         });
         let login_parent = document.getElementById("Login").parentElement;
@@ -47,7 +49,9 @@ export class LoginComponent implements OnInit {
         console.log(this.loginForm.value);
         this.authenticationService.login(this.loginForm.value).subscribe(res=>{
             console.log(res);
-            this.coockieService.set("token",res);
+            const {user,token} = JSON.parse(res);
+            this.userService.setUser(user);
+            this.coockieService.set("token",token);
             this.loading = true;
             this.router.navigate(['/']);
             this.loading = false;

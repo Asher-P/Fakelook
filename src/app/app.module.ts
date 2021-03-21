@@ -31,6 +31,8 @@ import { DateFilterComponent } from './components/filter/filterSubComponenets/da
 import { TagsFilterComponent } from './components/filter/filterSubComponenets/tags-filter/tags-filter.component'
 ;
 import { HashtagsFilterComponent } from './components/filter/filterSubComponenets/hashtags-filter/hashtags-filter.component'
+;
+import { LogoutComponent } from './components/logout/logout.component'
 
 @NgModule({
     imports: [
@@ -58,7 +60,8 @@ import { HashtagsFilterComponent } from './components/filter/filterSubComponenet
         TagsFilterComponent,
         DateFilterComponent,
         PublisherFilterComponent,
-        DistanceFilterComponent],
+        DistanceFilterComponent,
+        LogoutComponent],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
