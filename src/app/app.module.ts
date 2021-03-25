@@ -17,7 +17,10 @@ import { ErrorComponent } from './components/error/error.component';;
 import { PostsContainerComponent } from './components/posts-container/posts-container.component'
 ;
 import { PostComponent } from './components/post/post.component'
-import { AgmCoreModule } from '@agm/core';
+import { AgmCoreModule } from '@agm/core';;
+import { UploadPostComponent } from './components/upload-post/upload-post.component'
+;
+import { FilterComponent } from './components/filter/filter.component'
 
 
 
@@ -40,7 +43,9 @@ import { AgmCoreModule } from '@agm/core';
         PostComponent,
         PostsContainerComponent,
         MapComponent,
-        AccessTokenComponent],
+        AccessTokenComponent,
+        FilterComponent,
+        UploadPostComponent],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

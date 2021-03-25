@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
             this.loading = false;
          },
             (err)=>{
-                this.error=err;
+                this.error="Email or Password is worng";
                 this.loading = false;});
     }
 }

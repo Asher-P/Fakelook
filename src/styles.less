@@ -6,13 +6,17 @@ a { cursor: pointer }
 .menu { grid-area: menu; }
 .main { grid-area: main; }
 .footer { grid-area: footer; }
+.functions {grid-area:functions; max-width: 200px;}
+.functionsmenu {grid-area:functionsmenu; max-height: 200px; max-width: 250px;}
 
 .grid-container {
     display: grid;
     grid-template-areas:
       'header header header header header header'
-      'menu main main main main main'
-      'filter main main main main main'
+      'menu menu menu menu menu menu'
+      'functionsmenu . . . . .'
+      'functions main main main main main'
+      'functions main main main main main'
       'footer footer footer footer footer footer';
     background-color: #2196F3;
 
