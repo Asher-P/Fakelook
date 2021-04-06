@@ -13,8 +13,7 @@ export class AuthGuard implements CanActivate {
 
    async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     let flag = await this.authenticationService.isAuthenticated();
-    console.log(flag);
-    console.log("gurd flag",flag);
+    
     if(flag === true){
       return true;
     }

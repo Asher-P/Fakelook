@@ -1,0 +1,10 @@
+<div class="form-group" style="flex-direction: row;">
+    <div style="border: 2px;">
+    <label>From Date</label>
+    <input type="date" name="formDate" (focusout)="focusOut($event)" [(ngModel)]="dateFilterData.fromDate">
+    </div>
+    <div style="border: 2px; margin-left: 5px;">
+    <label>To Date</label>
+    <input type="date" (focusout)="focusOut($event)" name="toDate" [(ngModel)]="dateFilterData.toDate">
+    </div>
+</div>

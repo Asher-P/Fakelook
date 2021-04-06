@@ -20,8 +20,6 @@ export class HomeComponent implements OnInit{
     user: User;
     posts:Post[];
     constructor(private userService: UserService,
-        private cookieService:CookieService,
-        private router:ActivatedRoute,
         private  route:Router) {
             this.posts = [
                 new Post(new User("Asher","Peretz"),"https://blog.photofeeler.com/wp-content/uploads/2017/09/tinder-photo-size-tinder-picture-size-tinder-aspect-ratio-image-dimensions-crop.jpg",31.801462599999997,34.6524561,"kfso,bbb"),
@@ -44,36 +42,28 @@ export class HomeComponent implements OnInit{
     }
         
     MapClicked = ()=>{
-        console.log("map clicked")
-         this.showFeed=false;
-         this.showMap = true;
-         this.showFriends = false;
-        this.route.navigate["map"]
+       this.setFilter(true,false,false);
     }
     FeedClicked = ()=>{
-        console.log("feed clicked")
-         this.showMap = false;
-         this.showFeed=true;
-         this.showFriends = false;
-
-
+        this.setFilter(false,true,false);
     }
     FriendsClicked = ()=>{
-        this.showMap = false;
-        this.showFeed=false;
-        this.showFriends = true;
+        this.setFilter(false,false,true);
+    }
+
+
+    setFilter = (map:boolean,feed:boolean,friends:boolean)=>{
+        this.showMap = map;
+        this.showFeed=feed;
+        this.showFriends = friends;
     }
     ngOnInit() {
-        if(this.userService.currentUser){
-            console.log("currentUser",this.userService.currentUser);
-            this.user= this.userService.currentUser
+        const user = this.userService.currentUser;
+        if(user){
+            console.log("currentUser",user);
+            this.user= user;
         }
-        else{
-        this.userService.userChange.subscribe((res)=>{
-            this.user=res;
-            console.log("user",this.user);
-        });
-    }
+ 
 
     }
 }

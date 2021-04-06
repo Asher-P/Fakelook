@@ -17,6 +17,7 @@ export class UploadPostComponent implements OnInit {
   location;
   selectedFile:File = null;
   hashtags:"";
+  userTags:"";
   constructor(
     private formBuilder: FormBuilder,
     private postsService:PostsService,
@@ -41,7 +42,8 @@ export class UploadPostComponent implements OnInit {
       let post:SendPost = new SendPost(this.currentUser,this.selectedFile,
       this.location.coords.latitude,
       this.location.coords.longitude,
-      this.hashtags);
+      this.hashtags,
+      this.userTags);
       console.log("post",post);
       this.postsService.uploadPost(post);
     }
