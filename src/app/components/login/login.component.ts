@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
         console.log(this.loginForm.value);
         this.authenticationService.login(this.loginForm.value).subscribe(res=>{
             console.log(res);
-            const {user,token} = JSON.parse(res);
+            const {user,token} = res;//JSON.parse(res);
             this.userService.setUser(user);
             this.coockieService.set("token",token);
             this.loading = true;
