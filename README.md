@@ -3,11 +3,10 @@
 Fakelook repository will contain  
 client-side app, developed with Angular(https://angular.io/).
 
-##Local debute # Requirements
+## Local debute # Requirements
 
-Initially make sure you have node js  
-installed on your machine, as well as  
-angular cli. Without those two you   
+Initially make sure you have node js installed on your machine, 
+as well as angular cli. Without those two you   
 won't be able to run the following commands.  
 
 To start the project localy run the command:
@@ -16,7 +15,7 @@ To start the project localy run the command:
 
 now open your browser and navigate to app-url(http://localhost:4200).  
 
-##Building Docker image execute & Requirements
+## Building Docker image execute & Requirements
 
 First make sure you have Docker(https://www.docker.com/get-started) installed. 
 
