@@ -33,14 +33,14 @@ For [VSC](https://code.visualstudio.com/) users there is two ways for building d
  - Enjoy your image!
 
  Exucuting the image can be done by Docker desktop,VSC or by CMD/powershell etc.  
- * Docker desktop:    
+ #### Docker desktop:    
  - Open Docker desktop
  - Choose fakelookclient image and run it
 
- * Terminal/Shell:  
+ #### Terminal/Shell:  
  - run the command - docker run -d -it --name angular-app fakelook-client/angular-app
 
- * VSC:
+ #### VSC:
  - Cnrl+p + '>'
  - Docker Images: Run
  - Choose fakelookclient/angular-app
