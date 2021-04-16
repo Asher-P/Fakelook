@@ -1,6 +1,6 @@
 # Fakelook client
 
-Fakelook repository will contain client-side app, developed with Angular(https://angular.io/).  
+Fakelook repository will contain client-side app, developed with [Angular](https://angular.io/).  
 For e2e app take a look [here](https://github.com/Asher-P/FakelookServers) on server side.   
 Both parts represent e2e app who meant to be a social-media demo.
 
