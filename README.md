@@ -20,7 +20,7 @@ now open your browser and navigate to [app-url](http://localhost:4200).
 
 First make sure you have [Docker](https://www.docker.com/get-started) installed. 
 
-For [VSC](https://code.visualstudio.com/) users there is two ways for building docker image.  
+[VSC](https://code.visualstudio.com/) users there has two ways for building docker image.  
 #### First way:  
  - Get into VSC and open the app-folder
  - Ctrl+p and write '>'
